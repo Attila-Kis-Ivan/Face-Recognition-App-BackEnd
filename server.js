@@ -13,11 +13,9 @@ const db = knex({
   client: 'pg',
   connection: {
     host : 'dpg-cfaf3ohgp3jsh6f1lo2g-a',
-
     user : 'face_recognition_app_backend_database_user',
-        password : '',
-        database : 'face_recognition_app_backend_database',
-    
+    password : 'nTsnvp6YUrsUc8WzQBtCWWYgiSDvGpDY',
+    database : 'face_recognition_app_backend_database'
   }
 });
 
