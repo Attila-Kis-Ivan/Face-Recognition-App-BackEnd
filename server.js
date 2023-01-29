@@ -1,9 +1,9 @@
+require('dotenv').config();
 const express = require('express');
 const bodyParser = require('body-parser'); 
 const bcrypt = require('bcrypt-nodejs');
 const cors = require('cors');
 const knex = require('knex');
-require('dotenv').config();
 
 const register = require('./controllers/register')
 const signin = require('./controllers/signin');
@@ -15,7 +15,7 @@ const db = knex({
   connection: {
     host : 'dpg-cfaf3ohgp3jsh6f1lo2g-a',
     user : 'face_recognition_app_backend_database_user',
-    password : 'nTsnvp6YUrsUc8WzQBtCWWYgiSDvGpDY',
+    password : process.env.DATABASE_PASSWORD,
     database : 'face_recognition_app_backend_database'
   }
 });
