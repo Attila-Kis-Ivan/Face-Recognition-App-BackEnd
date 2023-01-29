@@ -17,7 +17,7 @@ const db = knex({
     user : 'face_recognition_app_backend_database_user',
         password : '',
         database : 'face_recognition_app_backend_database',
-    ssl: true,
+    
   }
 });
 
