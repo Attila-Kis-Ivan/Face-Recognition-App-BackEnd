@@ -14,13 +14,13 @@ const db = knex({
   connection: {
     host : 'dpg-cfaf3ohgp3jsh6f1lo2g-a',
     user : 'face_recognition_app_backend_database_user',
-    password : 'nTsnvp6YUrsUc8WzQBtCWWYgiSDvGpDY',
+    password : '',
     database : 'face_recognition_app_backend_database'
   }
 });
 
 
-const app = express();
+const app = express();TextTrackCueList
 
 app.use(cors())
 app.use(express.json()); 
