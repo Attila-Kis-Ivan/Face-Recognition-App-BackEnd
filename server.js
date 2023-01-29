@@ -12,10 +12,11 @@ const image = require('./controllers/image')
 const db = knex({
   client: 'pg',
   connection: {
-    host : '127.0.0.1',
-    user : 'attilakis-ivan',
-    password : '',
-    database : 'face-recognition'
+    host : 'dpg-cfaf3ohgp3jsh6f1lo2g-a',
+
+    user : 'face_recognition_app_backend_database_user',
+        password : '',
+        database : 'face_recognition_app_backend_database',
   }
 });
 
@@ -25,7 +26,7 @@ const app = express();
 app.use(cors())
 app.use(express.json()); 
 
-
+app.get('/', (req, res)=> { res.send(db.users) })
 app.post('/signin', (req, res) => {signin.handleSignin(req, res, db, bcrypt)})
 
 app.post('/register', (req, res) =>{register.handleRegister(req, res, db, bcrypt)}) 
